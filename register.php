@@ -20,21 +20,41 @@ if(isset($_POST['register'])){
 <html>
 <head>
 <title>Register</title>
-<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
 
-<div class="container">
-<h2>Register</h2>
+<div class="container d-flex justify-content-center align-items-center vh-100">
 
-<form method="POST">
-<input type="text" name="username" placeholder="Username" required>
-<input type="password" name="password" placeholder="Password" required>
-<button name="register">Register</button>
-</form>
+    <div class="card shadow p-4" style="width: 400px; border-radius: 15px;">
+        
+        <h2 class="text-center mb-4">Register</h2>
 
-<p>Already have account? <a href="login.php">Login</a></p>
+        <form method="POST">
+            <input type="text" name="username" class="form-control mb-3" placeholder="Username" required>
+
+            <input type="password" name="password" class="form-control mb-3" placeholder="Password" required>
+
+            <div class="d-grid">
+                <button name="register" class="btn btn-success">Register</button>
+            </div>
+        </form>
+
+        <p class="text-center mt-3">
+            Already have account? <a href="login.php">Login</a>
+        </p>
+
+    </div>
+
 </div>
+
+<style>
+body {
+    background: linear-gradient(to right, #141e30, #243b55);
+    font-family: 'Segoe UI', sans-serif;
+}
+</style>
 
 </body>
 </html>
