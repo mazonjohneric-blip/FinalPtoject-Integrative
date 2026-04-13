@@ -5,6 +5,7 @@ include "config.php";
 if(isset($_POST['login'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
+    
 
     $sql = "SELECT * FROM users WHERE username='$username'";
     $result = $conn->query($sql);
@@ -32,6 +33,7 @@ if(isset($_POST['login'])){
 </head>
 
 <body>
+    
 
 <div class="container d-flex justify-content-center align-items-center vh-100">
 
@@ -43,7 +45,7 @@ if(isset($_POST['login'])){
             <input type="text" name="username" class="form-control mb-3" placeholder="Username" required>
 
             <input type="password" name="password" class="form-control mb-3" placeholder="Password" required>
-
+            
             <div class="d-grid">
                 <button name="login" class="btn btn-success">Login</button>
             </div>
